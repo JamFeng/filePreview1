@@ -1,0 +1,10 @@
+# SPA 入口禁止强缓存，确保每次部署后用户能拿到最新 index.html
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# 带 hash 的静态资源可长期缓存
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
